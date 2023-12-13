@@ -10,10 +10,44 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <style>
+
+body {
+        background: linear-gradient(135deg, #001f3f 0%, #000000 100%);
+        color: #d1d1d1;
+      }
+
       #resultado {
         font-weight: bold;
         font-size: 6rem;
         text-align: center;
+        color: #48C6EF;
+        text-shadow: 2px 2px 4px #000000;
+      }
+
+      .btn-primary {
+        background-color: #004080;
+        border-color: #002f5f;
+        color: #ffffff;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      }
+
+      .btn-primary:hover {
+        background-color: #002f5f;
+        border-color: #001f3f;
+      }
+
+      .display-5.fw-bold {
+        color: #48C6EF;
+        text-shadow: 2px 2px 4px #000000;
+      }
+
+      .bg-dark {
+        background-color: #000000 !important;
+      }
+
+      video {
+        border: 5px solid #48C6EF;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
       }
     </style>
   </head>
@@ -182,15 +216,6 @@
       setTimeout(predecir, 150);
     }
 
-    /**
-       * Hermite resize - fast image resize/resample using Hermite filter. 1 cpu version!
-       * 
-       * @param {HtmlElement} canvas
-       * @param {int} width
-       * @param {int} height
-       * @param {boolean} resize_canvas if true, canvas will be resized. Optional.
-       * Cambiado por RT, resize canvas ahora es donde se pone el chiqitillllllo
-       */
       function resample_single(canvas, width, height, resize_canvas) {
           var width_source = canvas.width;
           var height_source = canvas.height;
